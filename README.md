@@ -1,2 +1,24 @@
 # open-field-analysis-tool
-このPythonツールは、DeepLabCutデータを用いたオープンフィールド試験の行動分析を自動化します。キャリブレーション：4点GUI選択によりピクセルをcmに変換。クリーニング：信頼度の低いデータをフィルタリングし、欠落フレームを補間。指標：30%/50%中央ゾーンにおける速度と時間を算出。出力：軌跡プロットとExcelサマリーを生成。使用方法：スクリプトを実行し、GUIの指示に従ってデータフォルダを選択してください。
+
+# DeepLabCut Trajectory Analysis Tool
+
+This repository contains a Python-based analysis tool for processing trajectory data exported from DeepLabCut. It calculates travel distance, velocity, and time spent in specific central zones (30% and 50% of the arena).
+
+## Features
+- **GUI-based interaction**: Easily select data folders and define analysis regions.
+- **Manual Calibration**: Define the arena size by clicking 4 corners on the video frame.
+- **Data Filtering**: Automated likelihood-based filtering and linear interpolation for missing data points.
+- **Zone Analysis**: Calculates stay time and distance within 30% and 50% center areas.
+- **Visualization**: Generates trajectory plots for each analyzed file.
+
+## Requirements
+To run this script, you need the following Python libraries:
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `opencv-python`
+- `openpyxl`
+
+You can install them via pip:
+```bash
+pip install pandas numpy matplotlib opencv-python openpyxl
